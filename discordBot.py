@@ -32,7 +32,7 @@ async def eight_ball(context):
                 pass_context=True)
 async def simpForMe(context):
     possible_responses = [
-        'Call me old fashioned but I was born and raised to serve'+ context.message.author.mention + '. I was destined to cook for them, bathe them, do their laundry, and wash their dishes. I only live to cater to their needs. I am their property and if they ever cheats on me thats my fault and they caught me slipping',
+        'Call me old fashioned but I was born and raised to serve '+ context.message.author.mention + '. I was destined to cook for them, bathe them, do their laundry, and wash their dishes. I only live to cater to their needs. I am their property and if they ever cheats on me thats my fault and they caught me slipping',
         'Daddy',
         'Senpai',
         'Oppa',
@@ -40,7 +40,7 @@ async def simpForMe(context):
         'u so icy Ima glacier boy',
         'Degrade me'
     ]
-    await client.say(random.choice(possible_responses) + " " + context.message.author.mention)
+    await client.say(random.choice(possible_responses))
 
 
 @client.command(name='simpForQwestt',
@@ -52,7 +52,7 @@ async def simpForMe(context):
 
 
 @client.command(name='stan',
-                aliases=['Stan'],
+                aliases=['Stan', 'STAN'],
                 pass_context=True)
 async def stan(context):
     possible_responses = [
@@ -64,6 +64,7 @@ async def stan(context):
         'STAN BTS',
     ]
     await client.say(random.choice(possible_responses) + " " + context.message.author.mention)
+
 
 @client.command(name='ship',
                 aliases=['gaymers', 'Ship'],
@@ -81,6 +82,19 @@ async def stan(context):
     ]
     choice = random.sample(possible_responses, 2)
     await client.say(choice[0] + " x " + choice[1])
+
+
+@client.command(name='loona',
+                aliases=['Loona', 'LOONA'],
+                pass_context=True)
+async def stan(context):
+    loon = 'Loona (stylized as LOOΠΔ, Korean: 이달의 소녀; Hanja: 이달의 少女; RR: Idarui Sonyeo; lit. '"Girl of the Month"') is a South Korean girl group formed by Blockberry Creative. The group was introduced to the public through a pre-debut project which began in October 2016, where each of the twelve members were revealed in a periodic fashion by releasing a promotional single over the following eighteen months. They debuted as a full ensemble with the extended play, [+ +] (2018), supported by the lead single "Favorite" and the title track "Hi High."',
+    insta ='\nInstagram: https://www.instagram.com/loonatheworld/',
+    youtube='\nYoutube: https://www.youtube.com/c/loonatheworld/featured',
+    twitter ='\nTwitter: https://twitter.com/loonatheworld',
+    shop = '\nShop: https://shop.loonatheworldus.com/'
+    await client.say(loon + insta + youtube + twitter + shop)
+
 
 @client.command()
 async def square(number):
