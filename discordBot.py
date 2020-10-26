@@ -28,8 +28,6 @@ async def eight_ball(context):
 
 
 @client.command(name='simpForMe',
-                description="Answers a yes/no question.",
-                brief="Answers from the beyond.",
                 aliases=['simpforme', 'simp'],
                 pass_context=True)
 async def simpForMe(context):
@@ -42,8 +40,48 @@ async def simpForMe(context):
         'u so icy Ima glacier boy',
         'Degrade me'
     ]
-    await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
+    await client.say(random.choice(possible_responses) + " " + context.message.author.mention)
 
+
+@client.command(name='simpForQwestt',
+                aliases=['simpforqwestt', 'simpforQwestt', 'simpForqwestt'],
+                pass_context=True)
+async def simpForMe(context):
+    qwestt = 'Call me old fashioned but I was born and raised to serve Qwestt. I was destined to cook for him, bathe him, do his laundry, and wash his dishes.'
+           + 'I only live to cater to his needs. I am his property and if he ever cheats on me thats my fault and he caught me slipping.'
+    await client.say(qwestt)
+
+
+@client.command(name='stan',
+                aliases=['Stan'],
+                pass_context=True)
+async def stan(context):
+    possible_responses = [
+        'STAN LOONA',
+        'STAN Stray Kids',
+        'STAN NCT',
+        'STAN ATEEZ',
+        'STAN Twice',
+        'STAN BTS',
+    ]
+    await client.say(random.choice(possible_responses) + " " + context.message.author.mention)
+
+@client.command(name='ship',
+                aliases=['gaymers', 'Ship'],
+                pass_context=True)
+async def stan(context):
+    possible_responses = [
+        'Qwestt',
+        'Scott',
+        'Wilson',
+        'Donovan',
+        'Nick',
+        'Ryan',
+        'Brian',
+        'Erik'
+    ]
+    choice = random.sample(possible_responses, 2)
+    await client.say(choice[0] + " x " + choice[1])
 
 @client.command()
 async def square(number):
