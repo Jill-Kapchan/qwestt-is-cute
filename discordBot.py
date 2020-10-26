@@ -4,6 +4,7 @@ import random
 import asyncio
 import aiohttp
 import json
+import time
 from discord import Game
 from discord.ext.commands import Bot
 
@@ -94,6 +95,14 @@ async def stan(context):
     twitter ='\nTwitter: https://twitter.com/loonatheworld'
     shop = '\nShop: https://shop.loonatheworldus.com/'
     await client.say(loon + insta + youtube + twitter + shop)
+
+
+@client.command(name='delete',
+                aliases=['del', 'd'],
+                pass_context=True)
+async def on_message(message):
+    time.sleep(2);
+    await client.delete_message(message)
 
 
 @client.command()
