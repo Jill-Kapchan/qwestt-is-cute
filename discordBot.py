@@ -88,10 +88,10 @@ async def stan(context):
                 aliases=['Loona', 'LOONA'],
                 pass_context=True)
 async def stan(context):
-    loon = 'Loona (stylized as LOOΠΔ, Korean: 이달의 소녀; Hanja: 이달의 少女; RR: Idarui Sonyeo; lit. '"Girl of the Month"') is a South Korean girl group formed by Blockberry Creative. The group was introduced to the public through a pre-debut project which began in October 2016, where each of the twelve members were revealed in a periodic fashion by releasing a promotional single over the following eighteen months. They debuted as a full ensemble with the extended play, [+ +] (2018), supported by the lead single "Favorite" and the title track "Hi High."',
-    insta ='\nInstagram: https://www.instagram.com/loonatheworld/',
-    youtube='\nYoutube: https://www.youtube.com/c/loonatheworld/featured',
-    twitter ='\nTwitter: https://twitter.com/loonatheworld',
+    loon = 'Loona (stylized as LOOΠΔ, Korean: 이달의 소녀; Hanja: 이달의 少女; RR: Idarui Sonyeo; lit. '"Girl of the Month"') is a South Korean girl group formed by Blockberry Creative. The group was introduced to the public through a pre-debut project which began in October 2016, where each of the twelve members were revealed in a periodic fashion by releasing a promotional single over the following eighteen months. They debuted as a full ensemble with the extended play, [+ +] (2018), supported by the lead single "Favorite" and the title track "Hi High."'
+    insta ='\nInstagram: https://www.instagram.com/loonatheworld/'
+    youtube='\nYoutube: https://www.youtube.com/c/loonatheworld/featured'
+    twitter ='\nTwitter: https://twitter.com/loonatheworld'
     shop = '\nShop: https://shop.loonatheworldus.com/'
     await client.say(loon + insta + youtube + twitter + shop)
 
