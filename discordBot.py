@@ -97,12 +97,12 @@ async def stan(context):
     await client.say(loon + insta + youtube + twitter + shop)
 
 
-@client.command(name='delete',
-                aliases=['d', 'del'],
-                pass_context=True)
-async def delete(message):
-    await asyncio.sleep(1)
-    await message.delete()
+@client.event
+async def on_message(message):
+    if message.content.upper().startswith('!PING'):
+        userID = message.author.id
+        await client.send_message(message.channel, "<@%s> Pong!" % (userID))
+        await client.delete_message(message)
 
 
 @client.command()
