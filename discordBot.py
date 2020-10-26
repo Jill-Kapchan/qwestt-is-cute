@@ -1,4 +1,5 @@
 # Work with Python 3.6
+import os
 import random
 import asyncio
 import aiohttp
@@ -7,7 +8,6 @@ from discord import Game
 from discord.ext.commands import Bot
 
 BOT_PREFIX = ("?", "!")
-TOKEN = "NjgyNzIxNTU5NTY3MTM4ODI4.XlhIAA.K_6uiuRe0AnsAf5EbB0tXKVS4u4" # Get at discordapp.com/developers/applications/me
 
 client = Bot(command_prefix=BOT_PREFIX)
 
@@ -60,4 +60,4 @@ async def bitcoin():
         response = json.loads(response)
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate'])
 
-client.run(TOKEN)
+client.run(os.getenv('BOT_TOKEN'))
