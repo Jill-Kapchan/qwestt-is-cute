@@ -103,6 +103,7 @@ async def on_message(message):
         await message.channel.purge(limit=1)
         #await client.delete_message(message)
 
+
 @client.event
 async def on_message(message):
     if message.content.startswith('!d'):
