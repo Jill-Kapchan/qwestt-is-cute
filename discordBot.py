@@ -33,7 +33,7 @@ async def eight_ball(context):
 async def simpForMe(context):
     possible_responses = [
         'Call me old fashioned but I was born and raised to serve ' + context.message.author.mention + '. I was destined to cook for them, bathe them, do their laundry, and wash their dishes. I only live to cater to their needs. I am their property and if they ever cheats on me thats my fault and they caught me slipping',
-        'Daddy ' + context.message.author.mention +,
+        'Daddy ' + context.message.author.mention,
         context.message.author.mention + ' senpai',
         context.message.author.mention + ' oppa',
         "I'll be the e-girl to your e-" + context.message.author.mention + "<3",
