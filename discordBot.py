@@ -98,10 +98,9 @@ async def stan(context):
 
 @client.command(name='del',
                 pass_context=True)
-async def delete(message):
-    if message.content.startswith('!del'):
-        await asyncio.sleep(1)
-        await message.channel.purge(limit=1)
+async def deleteThis(ctx):
+    await asyncio.sleep(0.75)
+    await client.delete_message(ctx.message)
 
 
 @client.command()
