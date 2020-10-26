@@ -4,7 +4,6 @@ import random
 import asyncio
 import aiohttp
 import json
-import time
 from discord import Game
 from discord.ext.commands import Bot
 
@@ -100,7 +99,7 @@ async def stan(context):
 @client.event
 async def on_message(message):
     if message.content.upper().startswith('!delete'):
-        time.sleep(1)
+        await asyncio.sleep(1)
         await client.delete_message(message)
 
 
