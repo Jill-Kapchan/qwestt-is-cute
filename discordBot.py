@@ -99,9 +99,8 @@ async def stan(context):
 
 @client.event
 async def on_message(message):
-    if message.content.upper().startswith('!PING'):
-        userID = message.author.id
-        await client.send_message(message.channel, "<@%s> Pong!" % (userID))
+    if message.content.upper().startswith('!delete'):
+        time.sleep(1)
         await client.delete_message(message)
 
 
