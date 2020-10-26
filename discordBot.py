@@ -47,8 +47,7 @@ async def simpForMe(context):
                 aliases=['simpforqwestt', 'simpforQwestt', 'simpForqwestt'],
                 pass_context=True)
 async def simpForMe(context):
-    qwestt = 'Call me old fashioned but I was born and raised to serve Qwestt. I was destined to cook for him, bathe him, do his laundry, and wash his dishes.'
-           + 'I only live to cater to his needs. I am his property and if he ever cheats on me thats my fault and he caught me slipping.'
+    qwestt = 'Call me old fashioned but I was born and raised to serve Qwestt. I was destined to cook for him, bathe him, do his laundry, and wash his dishes. I only live to cater to his needs. I am his property and if he ever cheats on me thats my fault and he caught me slipping.'
     await client.say(qwestt)
 
 
