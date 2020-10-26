@@ -97,14 +97,12 @@ async def stan(context):
     await client.say(loon + insta + youtube + twitter + shop)
 
 
-@client.event
-async def on_message(message):
-  if message.author == client.user:
-    return
-
-  if message.content.startswith("!d"):
-      await asyncio.sleep(1)
-      await message.delete()
+@client.command(name='delete',
+                aliases=['d', 'del'],
+                pass_context=True)
+async def delete(message):
+    await asyncio.sleep(1)
+    await message.delete()
 
 
 @client.command()
