@@ -96,19 +96,12 @@ async def stan(context):
     await client.say(loon + insta + youtube + twitter + shop)
 
 
-@client.event
-async def on_message(message):
+@client.command(name='del',
+                pass_context=True)
+async def del(message):
     if message.content.startswith('!del'):
         await asyncio.sleep(1)
         await message.channel.purge(limit=1)
-        #await client.delete_message(message)
-
-
-@client.event
-async def on_message(message):
-    if message.content.startswith('!d'):
-        await asyncio.sleep(1)
-        await client.delete_message(message)
 
 
 @client.command()
