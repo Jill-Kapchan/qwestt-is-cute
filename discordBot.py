@@ -27,14 +27,20 @@ async def eight_ball(context):
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
 
 
-@client.command(name='almightyJill',
+@client.command(name='simpForMe',
                 description="Answers a yes/no question.",
                 brief="Answers from the beyond.",
-                aliases=['almighty_jill'],
+                aliases=['simpforme', 'simp'],
                 pass_context=True)
-async def almighty_Jill(context):
+async def simpForMe(context):
     possible_responses = [
-        'Call me old fashioned but I was born and raised to serve Qwestt. I was destined to cook for him, bathe him, do his laundry, and wash his dishes. I only live to cater to his needs. I am his property and if he ever cheats on me thats my fault and he caught me slipping.'
+        'Call me old fashioned but I was born and raised to serve'+ context.message.author.mention + '. I was destined to cook for them, bathe them, do their laundry, and wash their dishes. I only live to cater to their needs. I am their property and if they ever cheats on me thats my fault and they caught me slipping',
+        'Daddy',
+        'Senpai',
+        'Oppa',
+        "I'll be the e-girl to your e-" + context.message.author.mention + "<3",
+        'u so icy Ima glacier boy',
+        'Degrade me'
     ]
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
 
