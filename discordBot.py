@@ -123,5 +123,17 @@ async def bitcoin():
         response = await raw_response.text()
         response = json.loads(response)
         await client.say("Bitcoin price is: $" + response['bpi']['USD']['rate'])
+        
+@client.command(name='mama',
+                aliases=['MAMA', 'm4m4', 'M4M4'],
+                pass_context=True)
+async def mama(context):
+    await client.say('dada')
+    
+@client.command(name='dada',
+                aliases=['DADA', 'd4d4', 'D4D4'],
+                pass_context=True)
+async def dada(context):
+    await client.say('mama')
 
 client.run(os.getenv('BOT_TOKEN'))
